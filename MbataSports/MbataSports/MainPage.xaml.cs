@@ -15,7 +15,7 @@ namespace MbataSports
     {
         public MainPage()
         {
-            InitializeComponent();
+            InitializeCompone nt();
         }
     }
 }

@@ -1,34 +1,31 @@
 ﻿using System;
-namespace HPlusSports.Services
+namespace MbataSports.Services
 {
     public class Product
     {
-        public string Name
-		{
-			get;
-			set;
-		}
+        public string Name { get; set; }
+
         public int Id
-		{
-			get;
-			set;
-		}
+        {
+            get;
+            set;
+        }
         public string Description
-		{
-			get;
-			set;
-		}
+        {
+            get;
+            set;
+        }
         public string Image_Title
-		{
-			get;
-			set;
-		}
+        {
+            get;
+            set;
+        }
 
         public string Image
-		{
-			get;
-			set;
-		}
+        {
+            get;
+            set;
+        }
 
         public Uri ImageUri
         {
@@ -37,5 +34,5 @@ namespace HPlusSports.Services
                 return String.IsNullOrEmpty(Image) ? null : new Uri(Image);
             }
         }
-	}
+    }
 }

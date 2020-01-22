@@ -4,9 +4,9 @@ using System.IO;
 
 using System.Net.Http;
 using Newtonsoft.Json;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 
-namespace HPlusSports.Services
+namespace MbataSports.Services
 {
 	public static class ProductService
     {

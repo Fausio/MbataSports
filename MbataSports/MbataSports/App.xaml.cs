@@ -15,14 +15,17 @@ namespace MbataSports
 
         protected override void OnStart()
         {
+            Services.ProductService.LoadWishList();
         }
 
-        protected override void OnSleep()
+        protected override void OnSleep() 
         {
+            Services.ProductService.SaveWishList();
         }
 
         protected override void OnResume()
         {
+            Services.ProductService.LoadWishList();
         }
     }
 }

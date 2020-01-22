@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace HPlusSports.Services
+namespace MbataSports.Services
 {
     public class Order : INotifyPropertyChanged
     {
@@ -9,19 +9,16 @@ namespace HPlusSports.Services
         {
         }
 
-        public string ProductName
-        {
-            get;
-            set;
-        }
+        public string ProductName { get; set; }
 
         private int qty;
 
         public int Quantity
         {
             get { return qty; }
-            set{
-                if(value != qty)
+            set
+            {
+                if (value != qty)
                 {
                     qty = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Quantity"));
