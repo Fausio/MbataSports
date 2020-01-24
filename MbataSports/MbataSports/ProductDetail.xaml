@@ -3,13 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:design="CL-namespace:MbataSports.Design:assembly:MbataSports"
+             BindingContext="{x:Static design:ProductModel.Product}"
              mc:Ignorable="d"
-             x:Class="MbataSports.ProductDetail">
-    
-    
+             x:Class="MbataSports.ProductDetail"
+             >
+
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Detalhes do produto!"/>
+        <StackLayout Orientation="Vertical" Padding="10,20 ">
+
+            <StackLayout Orientation="Horizontal">
+                <Label  Text="Nome:"></Label>
+                <Label  Text="{Binding Path=Name}"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Descrição:"></Label>
+                <Label  Text="{Binding Path=Description}"></Label>
+            </StackLayout>
+
+            <Image Source="{Binding Path=ImageUri}"   
+                   Aspect="AspectFill" 
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="Start"
+                   />
+
+
+            <RelativeLayout HorizontalOptions="FillAndExpand">
+               
+                <Button Text="Order" x:Name="OrderBtn"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                             Property=Width,
+                                                                             Factor=.25}" >
+                 </Button>
+
+                <Button Text="Favorito"
+                        RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToView,
+                                                                              ElementName=OrderBtn, 
+                                                                              Property=x, 
+                                                                              Constant=180}">
+
+                </Button>
+                
+            </RelativeLayout>
+ 
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -15,7 +15,12 @@ namespace MbataSports
     {
         public MainPage()
         {
-            InitializeCompone nt();
+            InitializeComponent();
+        }
+
+        public void handle_click(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ProductDetail());
         }
     }
 }
